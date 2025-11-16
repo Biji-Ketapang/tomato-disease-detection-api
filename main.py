@@ -6,7 +6,7 @@ import io
 
 app = FastAPI()
 
-MODEL_PATH = "models/cnn/cnn_final.keras"
+MODEL_PATH = "models/cnn.keras"
 model = keras.models.load_model(MODEL_PATH)
 
 CLASS_NAMES = [
