@@ -5,7 +5,7 @@ WORKDIR /code
 COPY ./requirements.txt /code/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-COPY ./models/cnn/cnn_final.keras /code/models/cnn.keras
+COPY ./models/cnn_lite.tflite /code/models/cnn_lite.tflite
 COPY ./main.py /code/main.py
 
 ENV PYTHONDONTWRITEBYTECODE=1

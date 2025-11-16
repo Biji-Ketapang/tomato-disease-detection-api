@@ -2406,6 +2406,8 @@ source = { virtual = "." }
 dependencies = [
     { name = "ai-edge-litert" },
     { name = "fastapi", extra = ["standard"] },
+    { name = "numpy" },
+    { name = "pillow" },
 ]
 
 [package.dev-dependencies]
@@ -2422,6 +2424,8 @@ dev = [
 requires-dist = [
     { name = "ai-edge-litert", specifier = ">=2.0.3" },
     { name = "fastapi", extras = ["standard"], specifier = ">=0.121.2" },
+    { name = "numpy", specifier = ">=2.3.4" },
+    { name = "pillow", specifier = ">=12.0.0" },
 ]
 
 [package.metadata.requires-dev]
