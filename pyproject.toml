@@ -5,12 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "ai-edge-litert>=2.0.3",
     "fastapi[standard]>=0.121.2",
-    "tensorflow>=2.20.0",
 ]
 
 [dependency-groups]
 dev = [
+    "tensorflow>=2.20.0",
     "ipykernel>=7.1.0",
     "matplotlib>=3.10.7",
     "pandas>=2.3.3",
