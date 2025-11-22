@@ -1,10 +1,19 @@
 from fastapi import FastAPI, HTTPException, UploadFile
-from PIL import Image
+from starlette.middleware.cors import CORSMiddleware
 from ai_edge_litert.interpreter import Interpreter
+from PIL import Image
 import numpy as np
 import io
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 MODEL_PATH = "models/cnn_lite.tflite"
 interpreter = Interpreter(MODEL_PATH)
